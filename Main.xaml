@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="771,736" sap2010:WorkflowViewState.IdRef="Main_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugam="clr-namespace:UiPath.GSuite.Activities.Models;assembly=UiPath.GSuite.Activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="907,710" sap2010:WorkflowViewState.IdRef="Main_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities.XamlIntegration</x:String>
@@ -101,7 +101,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID0</x:Reference>
     </Flowchart.StartNode>
     <FlowDecision sap2010:Annotation.AnnotationText="Check if there is a new transaction" Condition="[NewTransaction]" DisplayName="Have input?" sap:VirtualizedContainerService.HintSize="160,129" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
       <sap:WorkflowViewStateService.ViewState>
@@ -113,12 +113,11 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </FlowDecision>
-    <FlowStep x:Name="__ReferenceID2">
+    <FlowStep x:Name="__ReferenceID0">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">260,114</av:Point>
           <av:Size x:Key="ShapeSize">200,52</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">360,166 360,216</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: DHER €26.66 (▼4.24%) Delivery Hero SE | Google Finance" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="6536d247-646f-4cdd-9834-845f4bbd4a14" Version="V2">
@@ -165,34 +164,6 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
-      <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID1">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">260,216</av:Point>
-              <av:Size x:Key="ShapeSize">200,52</av:Size>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <uga:WriteCellConnections Cell="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" WhatToWrite="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Delivery Hero Stock Update" BrowserItemId="1_92BdNv_8ijluiZpDmGwbxCPZuZr4BuI1_V8-iqIZnA" ConnectionId="7dbe4eac-1687-46f8-b698-74fbcfa16bb0" DisplayName="Write Cell" HideCell="False" sap:VirtualizedContainerService.HintSize="334,305" sap2010:WorkflowViewState.IdRef="WriteCellConnections_2" ItemSelectionMode="Browse" RangeLocation="Sheet1" UseConnectionService="True">
-            <uga:WriteCellConnections.FileIdBackup>
-              <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID0" StoredValue="Browse">
-                <usau:BackupSlot.BackupValues>
-                  <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
-                </usau:BackupSlot.BackupValues>
-              </usau:BackupSlot>
-            </uga:WriteCellConnections.FileIdBackup>
-            <uga:WriteCellConnections.Item>
-              <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID0}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="1_92BdNv_8ijluiZpDmGwbxCPZuZr4BuI1_V8-iqIZnA" ConnectionKey="7dbe4eac-1687-46f8-b698-74fbcfa16bb0" FriendlyName="Delivery Hero Stock Update" FullPathHint="My Drive/UI Path/Delivery Hero Stock Update" InputMode="Browse" />
-            </uga:WriteCellConnections.Item>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </uga:WriteCellConnections>
-        </FlowStep>
-      </FlowStep.Next>
     </FlowStep>
-    <x:Reference>__ReferenceID1</x:Reference>
   </Flowchart>
 </Activity>

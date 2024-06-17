@@ -1,0 +1,35 @@
+{
+  "exportedBy": null,
+  "bundleHash": null,
+  "version": "1.0.0.0",
+  "jitAssemblyCompilerCommands": [
+    {
+      "providerName": "TypedDataTable",
+      "typedDataTableDto": {
+        "id": 1,
+        "idRef": "ForEachRowConnections`1_1",
+        "hash": "ForEachRowConnections`1_1|DataRow|HawdrdWPcnfxfA9UeVCeNQQ7NqAev2QKxtGG5FNWm8",
+        "dataType": "System.Data.DataRow, System.Data.Common",
+        "columns": [
+          {
+            "columnName": "Share Price",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Time",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Daily Change",
+            "dataType": "System.String, System.Private.CoreLib"
+          }
+        ]
+      },
+      "entityAssemblyKey": {
+        "name": "Studio.Generated.TypedDataRow1",
+        "hash": "ForEachRowConnections`1_1|DataRow|aTPZ6UHXLw35Z6OuUHswWu6ziyHaGa3EJ3xU76OgM",
+        "assemblyName": "Studio.Generated.TypedDataRow1"
+      }
+    }
+  ]
+}

@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>440,586</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>440,626</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SendEmail_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -87,7 +87,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="388,410" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="TEXT" SaveAsDraft="True" Subject="DH Daily Stock Price Update" TextBody="[string.Format(&quot;““Today’s stock price for Delivery Hero is ““ + in_sharePrice + ““ as of ““ + in_shareDate + ““. The daily percentage change is ““ + in_shareChange + ““.””&quot;)]" To="[New String(){&quot;martin.falli@deliveryhero.com&quot;}]" UseConnectionService="True">
+    <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="388,410" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="TEXT" SaveAsDraft="True" Subject="DH Daily Stock Price Update" TextBody="[string.Format(&quot;&quot;&quot;Hi Team,{0}{1}Today’s stock price for Delivery Hero is &quot;&quot; + in_sharePrice + &quot;&quot; as of &quot;&quot; + in_shareDate + &quot;&quot;. The daily percentage change is &quot;&quot; + in_shareChange + &quot;&quot;.{2}{3}You can see the daily history for the stock in this sheet: https://docs.google.com/spreadsheets/d/1_92BdNv_8ijluiZpDmGwbxCPZuZr4BuI1_V8-iqIZnA/edit?gid=0#gid=0{4}{5}Have a great day,{6}The DH Stock Robot&quot;&quot;&quot;, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine)]" To="[New String(){&quot;martin.falli@deliveryhero.com&quot;}]" UseConnectionService="True">
       <uga:SendEmailConnections.Attachments>
         <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)" />
       </uga:SendEmailConnections.Attachments>

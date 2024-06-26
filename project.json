@@ -4,9 +4,11 @@
   "description": "Transactional Process",
   "main": "Main.xaml",
   "dependencies": {
+    "RPAHUB.BeautyMailRender.Activities": "[0.1.0.1005143228]",
     "UiPath.Excel.Activities": "[2.22.3]",
     "UiPath.GSuite.Activities": "[2.6.22]",
     "UiPath.Mail.Activities": "[1.21.1]",
+    "UiPath.MicrosoftOffice365.Activities": "[2.6.24]",
     "UiPath.System.Activities": "[23.10.6]",
     "UiPath.UIAutomation.Activities": "[23.10.11]"
   },

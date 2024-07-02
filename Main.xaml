@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Mainn" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="440,602" sap2010:WorkflowViewState.IdRef="Mainn_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Mainn" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="913,686" sap2010:WorkflowViewState.IdRef="Mainn_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -27,6 +27,7 @@
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -71,13 +72,17 @@
       <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="450,377" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="450,530" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="sharePrice" />
       <Variable x:TypeArguments="x:String" Name="shareChange" />
       <Variable x:TypeArguments="x:String" Name="shareDate" />
+      <Variable x:TypeArguments="x:String" Name="shareEmoji" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -86,27 +91,33 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetStockPrice.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="GetStockPrice.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InOutArgument x:TypeArguments="x:String" x:Key="in_out_sharePrice">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="sharePrice" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="in_out_shareChange">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="shareChange" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="in_out_shareDate">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="shareDate" />
-        </InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="in_out_sharePrice">[sharePrice]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="in_out_shareChange">[shareChange]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="in_out_shareDate">[shareDate]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="in_out_shareEmoji">[shareEmoji]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SaveToSheet.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="SaveToSheet.xaml">
       <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_sharePrice">[sharePrice]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_shareChange">[shareChange]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_shareDate">[shareDate]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_shareEmoji">[shareEmoji]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SendEmail.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="SendEmail.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_sharePrice">
           <VisualBasicValue x:TypeArguments="x:String" ExpressionText="sharePrice" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_shareDate">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="shareDate" />
         </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_shareChange">
           <VisualBasicValue x:TypeArguments="x:String" ExpressionText="shareChange" />
         </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_shareDate">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="shareDate" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_shareEmoji">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="shareEmoji" />
         </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>

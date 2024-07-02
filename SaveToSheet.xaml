@@ -3,11 +3,12 @@
     <x:Property Name="in_sharePrice" Type="InArgument(x:String)" />
     <x:Property Name="in_shareDate" Type="InArgument(x:String)" />
     <x:Property Name="in_shareChange" Type="InArgument(x:String)" />
+    <x:Property Name="in_shareEmoji" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>907,760</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>913,760</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SaveToSheet_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -112,7 +113,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uga:AppendRow ContinueOnError="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" CellReference="A1" DisplayName="Append Row" GoogleSpreadsheet="[Spreadsheet]" sap:VirtualizedContainerService.HintSize="388,192" sap2010:WorkflowViewState.IdRef="AppendRow_1" Row="[{in_sharePrice, in_shareDate, in_shareChange}]" SheetName="Sheet1" />
+            <uga:AppendRow ContinueOnError="{x:Null}" SpreadsheetId="{x:Null}" AuthScopesInvalid="False" CellReference="A1" DisplayName="Append Row" GoogleSpreadsheet="[Spreadsheet]" sap:VirtualizedContainerService.HintSize="388,192" sap2010:WorkflowViewState.IdRef="AppendRow_1" Row="[{in_sharePrice, in_shareDate, in_shareChange, in_shareEmoji}]" SheetName="Sheet1" />
           </Sequence>
         </ActivityAction>
       </ugas:GoogleSheetsApplicationScope.Body>

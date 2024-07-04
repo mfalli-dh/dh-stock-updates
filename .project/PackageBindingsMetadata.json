@@ -3462,7 +3462,7 @@
             },
             "Values": {
               "ParentFolders[*].Name": {
-                "Value": "BrowserFolderPath",
+                "Value": "BrowserFolder",
                 "ValueSource": "Property"
               },
               "ParentFolders[*].ID": {

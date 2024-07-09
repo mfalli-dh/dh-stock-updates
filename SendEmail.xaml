@@ -179,7 +179,7 @@ The DH Stock Robot"]</InArgument>
         <OutArgument x:TypeArguments="x:String">[emailRecipients]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">["martin.falli@deliveryhero.com"]</InArgument>
+        <InArgument x:TypeArguments="x:String">["claudio.zaag@deliveryhero.com;arnulfo.martinez@deliveryhero.com;sathesh.paramasivam@deliveryhero.com;martin.falli@deliveryhero.com"]</InArgument>
       </Assign.Value>
     </Assign>
     <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" AttachmentsCollection="[attachment]" Body="[emailBody]" DisplayName="Send SMTP Mail Message" Email="uipath@deliveryhero.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="434,152" sap2010:WorkflowViewState.IdRef="SendMail_3" IgnoreCRL="False" IsBodyHtml="False" Port="587" SecureConnection="Auto" SecurePassword="[emailpassword]" Server="smtp.gmail.com" Subject="[&quot;DH Daily Stock Price Update &quot; + in_shareEmoji]" To="[emailRecipients]">
